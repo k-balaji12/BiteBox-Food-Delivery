@@ -1,0 +1,395 @@
+
+/* BiteBox - My Orders */
+
+.orders-page {
+    width: min(1050px, 92%);
+    margin: 0 auto;
+    padding: 42px 0 60px;
+    color: #292929;
+}
+
+.orders-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    margin-bottom: 30px;
+}
+
+.orders-eyebrow {
+    margin: 0 0 8px;
+    color: #df6829;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.orders-heading h1 {
+    margin: 0;
+    font-size: clamp(30px, 4vw, 40px);
+    font-weight: 800;
+}
+
+.orders-subtitle {
+    margin: 9px 0 0;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.orders-shop-button,
+.orders-primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45px;
+    padding: 12px 19px;
+    border: 1px solid #e36b2c;
+    border-radius: 10px;
+    background: #e36b2c;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.orders-shop-button:hover,
+.orders-primary-button:hover {
+    background: #c9571d;
+    transform: translateY(-1px);
+}
+
+.orders-count {
+    margin: 0 0 15px;
+    color: #777;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Order cards */
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.order-card {
+    overflow: hidden;
+    border: 1px solid #ece7e1;
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 7px 24px rgba(48, 35, 20, 0.045);
+}
+
+.order-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 22px 24px;
+    background: #fffaf4;
+    border-bottom: 1px solid #f0eae3;
+}
+
+.restaurant-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+}
+
+.restaurant-symbol {
+    display: flex;
+    flex: 0 0 48px;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    background: #ffeadb;
+    font-size: 24px;
+}
+
+.restaurant-info h2 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.restaurant-address {
+    margin: 5px 0 0;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.order-status {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    border-radius: 30px;
+    background: #e4f7e9;
+    color: #16833e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Order metadata */
+
+.order-meta {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 16px;
+    padding: 20px 24px;
+    border-bottom: 1px solid #efefef;
+}
+
+.order-meta > div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.meta-label {
+    color: #858585;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.order-meta strong {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+/* Ordered food items */
+
+.ordered-items {
+    padding: 22px 24px 10px;
+}
+
+.ordered-items h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.ordered-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ordered-item:last-child {
+    border-bottom: none;
+}
+
+.ordered-item-image {
+    display: flex;
+    flex: 0 0 76px;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 11px;
+    background: #fff2e5;
+}
+
+.ordered-item-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-placeholder {
+    font-size: 27px;
+}
+
+.ordered-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.ordered-item-info h4 {
+    margin: 0 0 7px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.ordered-item-info p {
+    margin: 0;
+    color: #777;
+    font-size: 12px;
+}
+
+.ordered-item-total {
+    flex-shrink: 0;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.items-unavailable {
+    color: #777;
+    font-size: 13px;
+}
+
+/* Total */
+
+.order-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px 24px;
+    border-top: 1px dashed #dedede;
+    background: #fffdfb;
+}
+
+.order-card-bottom span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.order-card-bottom strong {
+    color: #df6829;
+    font-size: 23px;
+    white-space: nowrap;
+}
+
+/* Empty state */
+
+.orders-empty {
+    padding: 52px 22px;
+    border: 1px solid #eee7df;
+    border-radius: 18px;
+    background: #fffaf4;
+    text-align: center;
+}
+
+.empty-icon {
+    margin-bottom: 15px;
+    font-size: 48px;
+}
+
+.orders-empty h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.orders-empty p {
+    max-width: 450px;
+    margin: 12px auto 23px;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Responsive layout */
+
+@media (max-width: 650px) {
+    .orders-page {
+        padding: 28px 0 40px;
+    }
+
+    .orders-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+        margin-bottom: 24px;
+    }
+
+    .orders-shop-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .order-card-top {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px;
+        gap: 13px;
+    }
+
+    .restaurant-symbol {
+        flex-basis: 42px;
+        width: 42px;
+        height: 42px;
+        font-size: 21px;
+    }
+
+    .restaurant-info h2 {
+        font-size: 16px;
+    }
+
+    .order-meta {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px 12px;
+        padding: 18px;
+    }
+
+    .ordered-items {
+        padding: 20px 18px 8px;
+    }
+
+    .ordered-item {
+        gap: 11px;
+    }
+
+    .ordered-item-image {
+        flex-basis: 64px;
+        width: 64px;
+        height: 64px;
+    }
+
+    .ordered-item-info h4 {
+        font-size: 13px;
+    }
+
+    .ordered-item-total {
+        font-size: 13px;
+    }
+
+    .order-card-bottom {
+        padding: 18px;
+    }
+
+    .order-card-bottom strong {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 380px) {
+    .order-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .ordered-item {
+        flex-wrap: wrap;
+    }
+
+    .ordered-item-total {
+        margin-left: 75px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .orders-shop-button,
+    .orders-primary-button {
+        transition: none;
+    }
+
+    .orders-shop-button:hover,
+    .orders-primary-button:hover {
+        transform: none;
+    }
+}

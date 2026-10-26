@@ -1,0 +1,346 @@
+
+/* BiteBox reusable navigation bar */
+
+.bb-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #eee8df;
+    box-shadow: 0 4px 18px rgba(42, 35, 25, 0.05);
+    backdrop-filter: blur(12px);
+}
+
+.bb-nav-container {
+    width: min(1200px, 92%);
+    min-height: 76px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.bb-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: #24372b;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.bb-brand-icon {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    color: #fff;
+    background: #25834c;
+    box-shadow: 0 5px 12px rgba(37, 131, 76, 0.2);
+}
+
+.bb-brand-highlight {
+    color: #e67b32;
+}
+
+.bb-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(18px, 3vw, 38px);
+}
+
+.bb-nav-links a,
+.bb-login-link {
+    color: #4c514b;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.bb-nav-links a:hover,
+.bb-login-link:hover {
+    color: #25834c;
+}
+
+.bb-cart-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.bb-cart-count {
+    min-width: 21px;
+    height: 21px;
+    padding: 0 5px;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 50px;
+    color: #fff;
+    background: #e67b32;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Account area */
+
+.bb-nav-account {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+/* Keep existing Login button design */
+
+.bb-login-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 1px solid #25834c;
+    border-radius: 10px;
+    color: #25834c;
+}
+
+.bb-login-link:hover {
+    color: #fff;
+    background: #25834c;
+}
+
+/* Profile dropdown anchor */
+
+.bb-profile-menu {
+    position: relative;
+}
+
+/* Profile icon + username trigger */
+
+.bb-profile-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    max-width: 220px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #344339;
+    font: inherit;
+    cursor: pointer;
+    list-style: none;
+}
+
+.bb-profile-trigger::-webkit-details-marker {
+    display: none;
+}
+
+.bb-profile-trigger::marker {
+    content: "";
+}
+
+.bb-profile-trigger:focus-visible {
+    outline: 2px solid #25834c;
+    outline-offset: 4px;
+    border-radius: 6px;
+}
+
+.bb-profile-icon {
+    width: 37px;
+    height: 37px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #eaf5ed;
+}
+
+.bb-profile-icon svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: #25834c;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.bb-profile-name {
+    overflow: hidden;
+    max-width: 130px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.bb-profile-chevron {
+    color: #69736a;
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+.bb-profile-menu[open] .bb-profile-chevron {
+    transform: rotate(180deg);
+}
+
+/* Compact dropdown: anchored to the profile area */
+
+.bb-profile-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 1100;
+    width: 170px;
+    padding: 6px;
+    border: 1px solid #eee8df;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(42, 35, 25, 0.12);
+}
+
+.bb-profile-menu:not([open]) .bb-profile-dropdown {
+    display: none;
+}
+
+/* View Profile and Logout options */
+
+.bb-dropdown-item {
+    width: 100%;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 10px;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: #344339;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.bb-dropdown-item:hover {
+    background: #eaf5ed;
+    color: #25834c;
+}
+
+.bb-dropdown-item:focus-visible {
+    outline: 2px solid #25834c;
+    outline-offset: -2px;
+}
+
+/* Small icons inside the dropdown */
+
+.bb-dropdown-icon {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.bb-dropdown-divider {
+    height: 1px;
+    margin: 4px 5px;
+    background: #eee8df;
+}
+
+.bb-logout-form {
+    width: 100%;
+    margin: 0;
+}
+
+.bb-logout-button {
+    color: #bd3e32;
+}
+
+.bb-logout-button:hover {
+    background: #fff0ed;
+    color: #a52c23;
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 700px) {
+    .bb-nav-container {
+        width: 94%;
+        min-height: 68px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .bb-brand {
+        font-size: 22px;
+    }
+
+    .bb-brand-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .bb-nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: space-around;
+        gap: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #f0ece6;
+    }
+
+    .bb-nav-links a {
+        font-size: 14px;
+    }
+
+    .bb-profile-name {
+        max-width: 85px;
+    }
+
+    .bb-profile-trigger {
+        gap: 6px;
+    }
+
+    .bb-profile-dropdown {
+        width: 165px;
+    }
+}
+
+@media (max-width: 360px) {
+    .bb-profile-name {
+        display: none;
+    }
+
+    .bb-nav-links a {
+        font-size: 13px;
+    }
+
+    .bb-profile-dropdown {
+        width: 155px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .bb-nav-links a,
+    .bb-login-link,
+    .bb-profile-chevron {
+        transition: none;
+    }
+}

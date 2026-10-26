@@ -1,0 +1,217 @@
+
+/* ================= LOGIN PAGE ================= */
+
+.login-page {
+    flex: 1;
+    min-height: 68vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 20px;
+    background:
+        radial-gradient(
+            circle at 12% 15%,
+            rgba(245, 166, 35, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 88% 85%,
+            rgba(32, 91, 56, 0.09),
+            transparent 32%
+        ),
+        #fffaf4;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 42px 38px;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid #f0e8de;
+    border-radius: 22px;
+    box-shadow: 0 18px 55px rgba(38, 53, 39, 0.10);
+}
+
+.login-heading {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-eyebrow {
+    display: inline-block;
+    margin-bottom: 13px;
+    padding: 7px 13px;
+    border-radius: 30px;
+    background: #edf5ee;
+    color: #205b38;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.login-heading h1 {
+    color: #24372b;
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.login-heading p {
+    color: #777d76;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ================= FORM ================= */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #303b33;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    min-height: 49px;
+    padding: 13px 15px;
+    border: 1px solid #e5e4dd;
+    border-radius: 10px;
+    background: #fffefa;
+    color: #292d32;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #a0a39d;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #39764d;
+    box-shadow: 0 0 0 4px rgba(32, 91, 56, 0.09);
+}
+
+/* Shared BiteBox green button style */
+
+.login-btn {
+    width: 100%;
+    min-height: 51px;
+    margin-top: 5px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #205b38;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 7px 16px rgba(32, 91, 56, 0.16);
+    transition: background 0.2s ease, transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.login-btn:hover {
+    background: #17452b;
+    box-shadow: 0 10px 22px rgba(32, 91, 56, 0.22);
+    transform: translateY(-1px);
+}
+
+.login-btn:focus-visible {
+    outline: 3px solid #f5a623;
+    outline-offset: 3px;
+}
+
+/* ================= MESSAGES ================= */
+
+.message {
+    margin-bottom: 20px;
+    padding: 12px 14px;
+    border-radius: 9px;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.error {
+    color: #a12828;
+    background: #fff0ef;
+    border: 1px solid #f4d5d2;
+}
+
+.success {
+    color: #176b36;
+    background: #edf8ef;
+    border: 1px solid #d3ead8;
+}
+
+/* ================= REGISTER LINK ================= */
+
+.register-link {
+    margin-top: 25px;
+    text-align: center;
+    color: #777d76;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.register-link a {
+    color: #205b38;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    color: #17452b;
+    text-decoration: underline;
+}
+
+.login-note {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #f0ece5;
+    color: #96988f;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+    .login-page {
+        min-height: 65vh;
+        padding: 35px 16px;
+    }
+
+    .login-card {
+        padding: 32px 23px;
+        border-radius: 18px;
+    }
+
+    .login-heading h1 {
+        font-size: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .form-group input,
+    .login-btn {
+        transition: none;
+    }
+
+    .login-btn:hover {
+        transform: none;
+    }
+}

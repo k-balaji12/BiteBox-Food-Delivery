@@ -1,0 +1,319 @@
+
+/* =========================================
+   BiteBox Signup Page
+   Technology: HTML, JSP and CSS
+   ========================================= */
+
+.signup-page {
+    min-height: 80vh;
+    padding: 56px 24px;
+    background: #f7f8f2;
+    box-sizing: border-box;
+}
+
+.signup-page *,
+.signup-page *::before,
+.signup-page *::after {
+    box-sizing: border-box;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    background: #ffffff;
+    border: 1px solid #e8eadf;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 14px 45px rgba(31, 55, 32, 0.08);
+}
+
+/* Left introduction panel */
+
+.signup-intro {
+    padding: 52px 38px;
+    background: #183d2b;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signup-label {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #c7e8a4;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.signup-intro h1 {
+    margin: 0 0 20px;
+    font-size: clamp(28px, 3vw, 39px);
+    line-height: 1.2;
+    font-weight: 750;
+}
+
+.signup-intro > p {
+    margin: 0 0 30px;
+    color: #e0e9df;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.signup-benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0 0 18px;
+    color: #f1f5ee;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.benefit-icon {
+    display: inline-flex;
+    flex: 0 0 23px;
+    width: 23px;
+    height: 23px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #d8f0b7;
+    color: #183d2b;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Right signup form */
+
+.signup-form-section {
+    padding: 44px 42px;
+}
+
+.form-heading {
+    margin-bottom: 26px;
+}
+
+.form-heading h2 {
+    margin: 0 0 9px;
+    color: #20372a;
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+.form-heading p {
+    margin: 0;
+    color: #727970;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #293a2e;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #dce2d9;
+    border-radius: 9px;
+    outline: none;
+    background: #ffffff;
+    color: #26352b;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input {
+    min-height: 46px;
+}
+
+.form-group textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9aa198;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #39804e;
+    box-shadow: 0 0 0 3px rgba(57, 128, 78, 0.12);
+}
+
+.form-group small {
+    color: #777f76;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Error message from SignupServlet */
+
+.signup-error {
+    margin-bottom: 20px;
+    padding: 12px 14px;
+    border: 1px solid #efc4c4;
+    border-radius: 9px;
+    background: #fff1f1;
+    color: #a32828;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* Submit button */
+
+.signup-button {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 5px;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 9px;
+    background: #347c45;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.signup-button:hover {
+    background: #28663a;
+    transform: translateY(-1px);
+}
+
+.signup-button:focus-visible {
+    outline: 3px solid #a7d7a9;
+    outline-offset: 3px;
+}
+
+/* Login link */
+
+.login-prompt {
+    margin: 24px 0 0;
+    color: #70786f;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.login-prompt a {
+    color: #347c45;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-prompt a:hover {
+    color: #205c30;
+    text-decoration: underline;
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+    .signup-page {
+        padding: 36px 18px;
+    }
+
+    .signup-container {
+        max-width: 620px;
+        grid-template-columns: 1fr;
+    }
+
+    .signup-intro {
+        padding: 36px 32px;
+    }
+
+    .signup-intro h1 {
+        max-width: 500px;
+        font-size: 32px;
+    }
+
+    .signup-intro > p {
+        margin-bottom: 22px;
+    }
+
+    .signup-benefit {
+        margin-bottom: 12px;
+    }
+
+    .signup-form-section {
+        padding: 36px 32px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+    .signup-page {
+        padding: 22px 12px;
+    }
+
+    .signup-container {
+        border-radius: 15px;
+    }
+
+    .signup-intro {
+        padding: 30px 22px;
+    }
+
+    .signup-intro h1 {
+        font-size: 28px;
+    }
+
+    .signup-intro > p {
+        font-size: 14px;
+    }
+
+    .signup-form-section {
+        padding: 28px 20px;
+    }
+
+    .form-heading h2 {
+        font-size: 24px;
+    }
+
+    .signup-form {
+        gap: 15px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .form-group input,
+    .form-group textarea,
+    .signup-button {
+        transition: none;
+    }
+
+    .signup-button:hover {
+        transform: none;
+    }
+}

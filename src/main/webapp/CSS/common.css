@@ -1,0 +1,107 @@
+
+/* ================= GLOBAL STYLES ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #245b36;
+    --green-dark: #174326;
+    --green-light: #e8efda;
+    --orange: #f5a623;
+    --cream: #fff9eb;
+    --text: #253329;
+    --muted: #72796f;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 7%;
+    background: rgba(255, 251, 239, 0.97);
+}
+
+.logo {
+    color: var(--green);
+    font-size: 29px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--orange);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #b87813;
+}
+
+.login-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    color: white !important;
+    background: var(--green);
+}
+
+.login-button:hover {
+    background: var(--green-dark);
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    padding: 27px 15px;
+    background: #1e422b;
+    color: #f9f5e9;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* ================= ACCESSIBILITY ================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

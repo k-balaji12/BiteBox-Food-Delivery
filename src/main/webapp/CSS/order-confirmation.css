@@ -1,0 +1,379 @@
+/* BiteBox - Order Confirmation Page */
+
+.confirmation-page {
+    width: min(920px, 92%);
+    margin: 0 auto;
+    padding: 42px 0 55px;
+    color: #242424;
+}
+
+/* Success heading */
+
+.success-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.success-icon {
+    width: 66px;
+    height: 66px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e5f8eb;
+    color: #16833e;
+    font-size: 34px;
+    font-weight: 700;
+    animation: success-pop 0.55s ease-out both;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #e36b28;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.success-heading h1 {
+    margin: 0;
+    font-size: clamp(27px, 4vw, 38px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.success-message {
+    margin: 12px 0 0;
+    color: #696969;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Delivery video */
+
+.delivery-animation {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #fff7ef;
+    box-shadow: 0 8px 28px rgba(45, 32, 20, 0.08);
+}
+
+.delivery-video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #fff7ef;
+}
+
+/* Order details card */
+
+.order-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 26px 28px;
+    border: 1px solid #ececec;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.045);
+}
+
+.order-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.card-label {
+    margin: 0 0 7px;
+    color: #777777;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.order-card-header h2 {
+    margin: 0;
+    font-size: 25px;
+    overflow-wrap: anywhere;
+}
+
+.order-status {
+    display: inline-block;
+    padding: 8px 13px;
+    border-radius: 30px;
+    background: #e5f8eb;
+    color: #16833e;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.order-details {
+    padding: 12px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.detail-row,
+.total-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.detail-row {
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.detail-row span {
+    color: #737373;
+}
+
+.detail-row strong {
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* Items Section */
+
+.items-section {
+    padding: 22px 0 8px;
+}
+
+.items-section h3 {
+    margin: 0 0 16px;
+    font-size: 18px;
+}
+
+/* Updated Item Row Layout (Thumbnail + Info + Price Side-by-Side) */
+.item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.item-image {
+    width: 75px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    background: #f3eee8;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+.item-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #242424;
+    overflow-wrap: anywhere;
+}
+
+.item-quantity {
+    color: #777777;
+    font-size: 12px;
+}
+
+.item-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #242424;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.empty-items {
+    color: #777777;
+    font-size: 14px;
+}
+
+/* Total */
+
+.total-row {
+    align-items: center;
+    margin-top: 12px;
+    padding-top: 19px;
+    border-top: 1px dashed #dddddd;
+}
+
+.total-row span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.total-row strong {
+    color: #df6325;
+    font-size: 23px;
+    white-space: nowrap;
+}
+
+/* Action buttons */
+
+.confirmation-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin: 28px 0 22px;
+}
+
+.btn {
+    min-height: 48px;
+    padding: 14px 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.btn-primary {
+    background: #e86f2b;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #cb571b;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border-color: #e86f2b;
+    background: #ffffff;
+    color: #d75e20;
+}
+
+.btn-secondary:hover {
+    background: #fff2e9;
+    transform: translateY(-2px);
+}
+
+.closing-note {
+    margin: 0;
+    color: #777777;
+    font-size: 13px;
+    text-align: center;
+}
+
+.closing-note strong {
+    color: #e36b28;
+}
+
+/* Animations */
+
+@keyframes success-pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.65);
+    }
+
+    75% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 600px) {
+    .confirmation-page {
+        width: 92%;
+        padding: 28px 0 38px;
+    }
+
+    .success-heading {
+        margin-bottom: 22px;
+    }
+
+    .success-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 29px;
+    }
+
+    .success-message {
+        font-size: 14px;
+    }
+
+    .delivery-animation {
+        margin-bottom: 22px;
+        border-radius: 12px;
+    }
+
+    .delivery-video {
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
+    }
+
+    .order-card {
+        padding: 20px 17px;
+        border-radius: 14px;
+    }
+
+    .order-card-header h2 {
+        font-size: 22px;
+    }
+
+    .detail-row {
+        font-size: 13px;
+    }
+
+    .confirmation-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .total-row strong {
+        font-size: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .success-icon {
+        animation: none;
+    }
+
+    .btn {
+        transition: none;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+}

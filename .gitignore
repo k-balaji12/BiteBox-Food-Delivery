@@ -1,0 +1,11 @@
+
+# Compiled and generated files
+build/
+bin/
+target/
+*.class
+
+# Log and temporary files
+*.log
+.DS_Store
+Thumbs.db
