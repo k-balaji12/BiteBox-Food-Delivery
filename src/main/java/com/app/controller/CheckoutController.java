@@ -228,11 +228,9 @@ public class CheckoutController extends HttpServlet {
             	return;
 
         } catch (Exception e) {
-            log("Failed to place order.", e);
+            log("Failed to place order: " + e.getMessage(), e);
 
-            request.setAttribute("checkoutError",
-                    "Unable to place your order. Please try again.");
-            doGet(request, response);
+            throw new ServletException("Order processing failed.", e);
         }
     }
 
